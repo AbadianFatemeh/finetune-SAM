@@ -6,12 +6,12 @@ export CUDA_VISIBLE_DEVICES="1"
 # Define variables
 arch="vit_b"  # Change this value as needed
 finetune_type="adapter"
-dataset_name="MRI-Prostate"  # Assuming you set this if it's dynamic
+dataset_name="output_slices"  # Assuming you set this if it's dynamic
 targets='combine_all' # make it as binary segmentation 'multi_all' for multi cls segmentation
 # Construct train and validation image list paths
-img_folder="./datasets"  # Assuming this is the folder where images are stored
-train_img_list="${img_folder}/${dataset_name}/train_5shot.csv"
-val_img_list="${img_folder}/${dataset_name}/val_5shot.csv"
+img_folder="/kaggle/working"  # Assuming this is the folder where images are stored
+train_img_list="${img_folder}/${dataset_name}/train.csv"
+val_img_list="${img_folder}/${dataset_name}/val.csv"
 
 
 # Construct the checkpoint directory argument
